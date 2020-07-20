@@ -16,4 +16,6 @@
     <string name="body">isi</string>
     <string name="date">waktu</string>
     <string name="create">Create News</string>
+    <string name="delete">delete</string>
+    <string name="update">edit</string>
 </resources>

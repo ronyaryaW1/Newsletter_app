@@ -18,7 +18,7 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-//        initRecycler()
+        initRecycler()
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_home, menu)
@@ -54,4 +54,13 @@ class HomeActivity : AppCompatActivity() {
 //        recyclerView.adapter = adapter
 //        recyclerView.addItemDecoration(DividerItemDecoration(this,LinearLayoutManager.VERTICAL))
 //    }
+
+    private fun initRecycler() {
+        val db = NewsLetterDBHelper(this)
+        val recyclerView = findViewById<RecyclerView>(R.id.recycler_viw)
+        val adapter = NewsAdapter(db.getAllNews(), this)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = adapter
+        recyclerView.addItemDecoration(DividerItemDecoration(this,LinearLayoutManager.VERTICAL))
+    }
 }

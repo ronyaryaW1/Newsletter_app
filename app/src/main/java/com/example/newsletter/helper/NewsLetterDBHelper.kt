@@ -54,10 +54,12 @@ class NewsLetterDBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
                 val news = News(cursor.getString(1),
                     cursor.getString(2),
                     cursor.getString(3))
+                news.id = cursor.getInt(0)
                 listNews.add(news)
-            } while (cursor.moveToFirst())
+            } while (cursor.moveToNext())
         }
         db.close()
+        cursor.close()
         return listNews
     }
 
