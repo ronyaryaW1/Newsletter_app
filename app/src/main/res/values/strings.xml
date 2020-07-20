@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Newsletter</string>
+    <string name="register_title">Register</string>
+    <string name="name_hint">Nama</string>
+    <string name="email_hint">email</string>
+    <string name="password_hint">password</string>
+    <string name="gender_label">jenis_kelamin</string>
+    <string name="male_radio">Laki</string>
+    <string name="female_radio">wanita</string>
+    <string name="submit">submit</string>
+    <string name="profile">profile</string>
+    <string name="logout">logout</string>
+    <string name="hello">hai</string>
+    <string name="insert_title">judul</string>
+    <string name="title">judul_berita</string>
+    <string name="body">isi</string>
+    <string name="date">waktu</string>
+    <string name="create">Create News</string>
+</resources>
