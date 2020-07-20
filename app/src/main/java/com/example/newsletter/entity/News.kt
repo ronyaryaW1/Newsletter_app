@@ -5,4 +5,5 @@ class News (title: String, body: String, date: String) {
     val title: String = title
     val body: String = body
     val date: String = date
+
 }

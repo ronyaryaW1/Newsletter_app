@@ -11,11 +11,14 @@
     <string name="profile">profile</string>
     <string name="logout">logout</string>
     <string name="hello">hai</string>
-    <string name="insert_title">judul</string>
     <string name="title">judul_berita</string>
     <string name="body">isi</string>
     <string name="date">waktu</string>
     <string name="create">Create News</string>
     <string name="delete">delete</string>
     <string name="update">edit</string>
+    <string name="insert_title">Create News</string>
+    <string name="update_title">Update News</string>
+    <string name="title_create">Update News</string>
+
 </resources>

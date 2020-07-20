@@ -29,20 +29,19 @@ class NewsAdapter(news: ArrayList<News>, context: Context) : RecyclerView.Adapte
         holder.title.setText(mNews.get(position).title)
         holder.body.setText(mNews.get(position).body)
         holder.date.setText(mNews.get(position).date)
-//        holder.btnUpdate.setOnClickListener {
-//            val intent = Intent(mContext, CreateActivity::class.java)
-//            intent.putExtra("id-extra", mNews.get(position).id)
-//            intent.putExtra("title-extra", mNews.get(position).title)
-//            intent.putExtra("body-extra", mNews.get(position).body)
-//            intent.putExtra("date-extra", mNews.get(position).date)
-//            mContext.startActivity(intent)
-//        }
-//
-//        holder.btnDelete.setOnClickListener {
-//            db.deleteNews(mNews.get(position).id)
-//            (mContext as Activity).finish()
-//            mContext.startActivity(mContext.intent)
-//            Toast.makeText(mContext, "Success Delete News", Toast.LENGTH_SHORT).show()
-//        }
+        holder.btnUpdate.setOnClickListener {
+            val intent = Intent(mContext, CreateActivity::class.java)
+            intent.putExtra("id-extra", mNews.get(position).id)
+            intent.putExtra("title-extra", mNews.get(position).title)
+            intent.putExtra("body-extra", mNews.get(position).body)
+            intent.putExtra("date-extra", mNews.get(position).date)
+            mContext.startActivity(intent)
+        }
+        holder.btnDelete.setOnClickListener {
+            db.deleteNews(mNews.get(position).id)
+            (mContext as Activity).finish()
+            mContext.startActivity(mContext.intent)
+            Toast.makeText(mContext, "Success Delete News", Toast.LENGTH_SHORT).show()
+        }
     }
 }
